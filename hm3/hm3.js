@@ -1,3 +1,5 @@
+// Task 3.1
+
 let num= 30;
 let str = '20';
 let bool = true;
@@ -58,4 +60,39 @@ for (let i = 0; i < btns.length; i++) {
         }
     })
 }
+
+// Task 3.2
+
+let task32 = document.getElementById('pro');
+task32.addEventListener("click", function (){
+    let lines = [];
+    for (let i = 0; i < 3; i++) {
+        let userInput;
+        do {
+            userInput = prompt('Write something!');
+        }
+        while (userInput === '');
+        if (userInput === null) {
+            break;
+        }
+        lines.push(userInput);
+    }
+    alert('You wrote next: ' + lines.join(', ') + '.');
+    console.log(lines)
+});
+
+// Task 3.3
+
+let task33 = document.getElementById('exp');
+task33.addEventListener("click", function (){
+    let fiveNum;
+    fiveNum = prompt('Please, write number!');
+
+    while (isNaN(parseInt(fiveNum))) {
+        fiveNum = prompt('I pleased, write the number');
+    }
+
+    alert('You wrote next: ' + fiveNum.split('')+'.');
+    console.log(fiveNum);
+});
 
