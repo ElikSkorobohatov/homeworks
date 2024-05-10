@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 1000px;
+    background-color: antiquewhite;
+}
+
+.title {
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    font-size:50px;
+    padding: 10px;
+}
+
+.btn-block {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr)
+}
+
+.btn{
+    margin: 20px;
+    width: 200px;
+    height: 50px;
+    font-size:20px;
+    background-color: brown;
+    color: antiquewhite;
+    transition: 0.5s;
+}
+
+.btn:hover{
+    background-color: ghostwhite;
+    color: black;
+    transition: 0.5s;
+}
+
