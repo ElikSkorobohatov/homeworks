@@ -65,34 +65,20 @@ for (let i = 0; i < btns.length; i++) {
 
 let task32 = document.getElementById('pro');
 task32.addEventListener("click", function (){
-    let lines = [];
-    for (let i = 0; i < 3; i++) {
-        let userInput;
-        do {
-            userInput = prompt('Write something!');
-        }
-        while (userInput === '');
-        if (userInput === null) {
-            break;
-        }
-        lines.push(userInput);
-    }
-    alert('You wrote next: ' + lines.join(', ') + '.');
-    console.log(lines)
+    let line1 = prompt('Write something!')
+    let line2 = prompt('Write something!')
+    let line3 = prompt('Write something!')
+    console.log(line1 + ' ' + line2 +  ' ' +line3)
+    alert(line1 + ' ' + line2 +  ' ' +line3)
 });
 
 // Task 3.3
 
+const fiveNum = 10369;
+
 let task33 = document.getElementById('exp');
+let result = fiveNum.toString();
 task33.addEventListener("click", function (){
-    let fiveNum;
-    fiveNum = prompt('Please, write number!');
-
-    while (isNaN(parseInt(fiveNum))) {
-        fiveNum = prompt('I pleased, write the number');
-    }
-
-    alert('You wrote next: ' + fiveNum.split('')+'.');
-    console.log(fiveNum);
+    alert('You wrote next: ' + result.split('').join(' ') + '.');
+    console.log(result.split('').join(' ') + '.');
 });
-
