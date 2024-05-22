@@ -19,22 +19,35 @@ sym.addEventListener('click', hm61);
 let arithmetic = document.querySelector('#arithmetic');
 
     function hm62() {
-        const user_num = [1, 2, 3, 4, '5', 6, '7', 8, 9, '10c', 'rw'];
-        const user_long = user_num.length;
-        const dataType = 'number';
+        let user_num = prompt("Enter array elements separated by spaces: ");
+
+        let user_array = user_num.split(' ');
+
+        let user_long = user_array.length;
+
         let result = 0;
         let count = 0;
 
+        if (user_array[user_long - 1] === '') {
+            user_array.pop();
+        }
+
         for (let i = 0; i < user_long; i++) {
-            if (typeof +user_num[i] === dataType && !isNaN(user_num[i])) {
-                result += +user_num[i];
+            let num = +user_array[i];
+
+            if (!isNaN(num)) {
+                console.log(num);
+                result += num;
                 count++;
             }
         }
 
-        console.log("Аrithmetical mean:", result / count );
+        console.log("Sum:", result);
+        console.log("Count:", count);
+        console.log("Arithmetic:", result/count);
     }
-arithmetic.addEventListener('click', hm62);
+
+    arithmetic.addEventListener('click', hm62);
 }
 
 {// Task 6.3
@@ -42,12 +55,21 @@ arithmetic.addEventListener('click', hm62);
     let deletion = document.querySelector('#deletion');
 
     function hm63() {
-        const user_num = [1, 2, 3, 4, 5, 6];
-        const user_delete = 4;
+        let user_num = prompt("Enter array elements separated by spaces: ");
+        let user_array = user_num.split(' ');
 
-        let result_num = user_num.filter(item => item !== user_delete);
+        if (user_array[user_array.length - 1] === '') {
+            user_array.pop();
+        }
+        console.log("Original array:", user_array);
 
-        console.log(result_num);
+        let user_delete = prompt('What delete?', '4');
+        let user_delete_array = user_delete.split(' ');
+        console.log("Elements to delete:", user_delete_array);
+
+        let result_array = user_array.filter(item => !user_delete_array.includes(item));
+
+        console.log("Filtered array:", result_array);
     }
 
     deletion.addEventListener('click', hm63);
