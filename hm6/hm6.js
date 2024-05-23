@@ -14,27 +14,27 @@ function hm61() {
 sym.addEventListener('click', hm61);
 }
 
+
+
 {// Task 6.2
 
-let arithmetic = document.querySelector('#arithmetic');
+    //для понимаю напишу что данная функция переводит строку
+    // в масив и если есть пробел в конце, уберает его
+    function translate_array(num){
+        let array = num.split(' ');
+        if (array[array.length - 1] === '') {
+            array.pop();
+        }
+        return array;
+    }
 
-    function hm62() {
-        let user_num = prompt("Enter array elements separated by spaces: ");
-
-        let user_array = user_num.split(' ');
-
-        let user_long = user_array.length;
-
+    function user_arithmetic(array){
         let result = 0;
         let count = 0;
+        let array_long = array.length;
 
-        if (user_array[user_long - 1] === '') {
-            user_array.pop();
-        }
-
-        for (let i = 0; i < user_long; i++) {
-            let num = +user_array[i];
-
+        for (let i = 0; i < array_long; i++) {
+            let num = +array[i];
             if (!isNaN(num)) {
                 console.log(num);
                 result += num;
@@ -44,33 +44,50 @@ let arithmetic = document.querySelector('#arithmetic');
 
         console.log("Sum:", result);
         console.log("Count:", count);
-        console.log("Arithmetic:", result/count);
+        let average_result = result / count;
+        return average_result;
     }
 
+let arithmetic = document.querySelector('#arithmetic');
+
+    function hm62() {
+        let user_num = prompt("Enter array elements separated by spaces: ");
+        user_num = translate_array(user_num);
+        result = user_arithmetic(user_num)
+        console.log("Arithmetic:", result);
+    }
     arithmetic.addEventListener('click', hm62);
 }
 
 {// Task 6.3
+    //для понимаю напишу что данная функция переводит строку
+    // в масив и если есть пробел в конце, уберает его
+    function trans_array(num){
+        let array = num.split(' ');
+        if (array[array.length - 1] === '') {
+            array.pop();
+        }
+        return array;
+    }
+
+    function filter_array(array, num_delete){
+        let result = array.filter(item => !num_delete.includes(item));
+        return result;
+    }
 
     let deletion = document.querySelector('#deletion');
 
     function hm63() {
         let user_num = prompt("Enter array elements separated by spaces: ");
-        let user_array = user_num.split(' ');
-
-        if (user_array[user_array.length - 1] === '') {
-            user_array.pop();
-        }
-        console.log("Original array:", user_array);
+        user_num = trans_array(user_num);
+        console.log("Original array:", user_num);
 
         let user_delete = prompt('What delete?', '4');
-        let user_delete_array = user_delete.split(' ');
-        console.log("Elements to delete:", user_delete_array);
+        user_delete = trans_array(user_delete);
+        console.log("Elements to delete:", user_delete);
 
-        let result_array = user_array.filter(item => !user_delete_array.includes(item));
-
+        let result_array = filter_array(user_num, user_delete);
         console.log("Filtered array:", result_array);
     }
-
     deletion.addEventListener('click', hm63);
 }
