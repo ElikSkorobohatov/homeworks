@@ -1,21 +1,15 @@
-
+function sum() {
     let result = 0;
-    let addFunction = true;
 
-    function userEnter(num) {
-        num = prompt('Write your number!', '2');
-        if (num === null) {
-            return false;
-        } else {
-            return function add() {
-                result += Number(num);
-                return result;
-            }
-        }
+    return function(num) {
+        result += num;
+        return result;
     }
+}
 
-    while (addFunction) {
-        let userNum
-        let addFunction = userEnter(userNum);
-        console.log(addFunction());
-    }
+const add = sum();
+
+console.log(add(4));
+console.log(add(6));
+console.log(add(10));
+console.log(add(7));
