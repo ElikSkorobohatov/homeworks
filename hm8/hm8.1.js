@@ -23,7 +23,6 @@ let ladder = {
 };
 
 ladder.up();
-
 ladder.down();
-
 ladder.showStep();
+ladder.up().up().down().showStep();
