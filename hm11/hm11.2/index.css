@@ -1,0 +1,15 @@
+#text{
+    font-size: 46px;
+    transition: 1s;
+}
+
+#text.active{
+    color: blue;
+    background-color: blanchedalmond;
+}
+
+#btn{
+    height: 50px;
+    width: 200px;
+    font-size: 24px;
+}
