@@ -36,7 +36,7 @@ let TODOlist = {
         let target = '';
         target += "<td>" + task.data + "</td> <td>" + task.taskReview + "</td>" +
             "<td>" + (task.completed ? 'Зроблено' : 'В процесі') + "</td>" +
-            "<td class = 'delete'><button class='remove' data-index = '"+ task.taskNumber +"'>Видалити задання</button> ";
+            "<td><button class='remove' data-index = '"+ task.taskNumber +"'>Видалити задання</button> ";
 
         let table = document.querySelector('.taskblock');
         let newRow = document.createElement('tr');
