@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script defer src="14.js"></script>
+    <style>
+        .contains{
+            width: 600px;
+            height: 400px;
+            overflow: hidden;
+            position: absolute;
+            top: 30%;
+            left: 30%;
+        }
+
+        .slider{
+            transition: 1s;
+            width: 100%;
+            margin: auto;
+            position: relative;
+            top: -28%;
+            display: flex;
+        }
+
+        #next{
+            transition: 1s;
+            position: absolute;
+            top: 35%;
+            left: 92%;
+            background-color: rgba(240, 248, 255, 0.5);
+            padding: 10px;
+        }
+
+        #next:hover{
+            background-color: rgba(122, 122, 122, 0.5);
+        }
+
+        #befor{
+            display: none;
+            transition: 1s;
+            position: absolute;
+            top: 35%;
+            left: 2%;
+            background-color: rgba(240, 248, 255, 0.5);
+            padding: 10px;
+        }
+
+        #befor:hover{
+            background-color: rgba(122, 122, 122, 0.5);
+        }
+
+        .dotSelector{
+
+            display: flex;
+            position: absolute;
+            left: 8%;
+            top: 70%;
+            text-align: center;
+            font-size: 36px;
+            cursor: pointer;
+        }
+
+        h2{
+            transition: 1s;
+        }
+
+        h2.active{
+            color: #f44336;
+        }
+
+    </style>
+</head>
+<body>
+    <div class = 'contains'>
+
+    </div>
+</body>
+</html>
