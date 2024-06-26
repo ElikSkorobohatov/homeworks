@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Form</title>
+    <script defer src="13.js"></script>
+    <link rel="stylesheet" href="13.css">
+</head>
+<body>
+<form id="contactForm" action="submit.php" method="post">
+    <label>We would like to help you!</label>
+    <input type="text" name="user_name" placeholder="name" id="name" required>
+    <p id="nameErrors" class="error"></p>
+
+    <input type="text" id="message" placeholder="Message" required>
+    <p id="messageErrors" class="error"></p>
+
+    <h2>HOW TO ANSWER YOU?</h2>
+    <input type="text" name="user_phone" placeholder="phone" id="phone" required>
+    <p id="phoneErrors" class="error"></p>
+
+    <input type="email" name="user_email" placeholder="email" id="email" required>
+    <p id="emailErrors" class="error"></p>
+
+    <button type="submit" id="send">Send message</button>
+</form>
+</body>
+</html>

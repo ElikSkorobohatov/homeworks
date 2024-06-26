@@ -1,0 +1,75 @@
+body{
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    padding: 100px;
+}
+
+form{
+    background-color: blanchedalmond;
+    width: 700px;
+    height: 600px;
+    padding: 50px 10px;
+}
+
+label{
+    font-size: 52px;
+    color: darkred;
+    padding: 30px;
+    text-align: center;
+}
+
+input{
+    width: 90%;
+    height: 50px;
+    font-size: 24px;
+    color: #6e6e6e;
+    margin: 15px 15px 0 15px;
+    padding: 0 0 0 20px;
+}
+
+#message{
+    width: 90%;
+    height: 100px;
+    font-size: 24px;
+    color: #6e6e6e;
+    margin: 15px;
+    padding: 20px 0 0 20px;
+}
+
+h2{
+    font-size: 16px;
+    padding: 0 0 0 30px;
+    color: darkred;
+}
+
+#send{
+    width: 92%;
+    height: 50px;
+    margin: 20px;
+    background-color: darkblue;
+    color: white;
+    font-size: 24px;
+    transition: 1s;
+}
+
+#send:hover{
+
+    background-color: #0606d5;
+}
+
+p{
+    color: darkred;
+    text-align: center;
+    font-size: 20px;
+    padding: 0;
+    margin: 3px;
+    transition: 1s;
+}
+
+.error {
+    color: red;
+    font-size: 0.9em;
+}
