@@ -44,7 +44,7 @@ function takeData(){
             weather.onreadystatechange = function() {
                 if (weather.readyState === 4 && weather.status === 200) {
                     const response = JSON.parse(weather.responseText);
-                    generateHtml(response);
+                    generateHtml(response); //генерируем НТML
                 }
             };
 
